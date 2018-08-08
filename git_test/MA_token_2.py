@@ -75,17 +75,22 @@
 from github import Github
 from  git import Repo
 import git
+
 g = Github("22c34f753fc0e78c051ada0c622e8d0ef2adb56d")
 
 for repo in g.get_user().get_repos():
  print(repo.name)
 
 repo = git.Repo.init('/home/pi/Desktop')
-code=g.get_repo('git_test-1')
-file ='/home/pi/Desktop/git_test-1/test-1.csv'
+code=g.get_repo('Test-ma')
+file ='/home/pi/Desktop/Test-ma/test_1.csv'
 repo.git.add(file)
 repo.git.commit(m = "commit message")
 ##origin = repo.remote('origin')
-repo.git.push('git_test-1', 'HEAD:master')
+repo.git.push('origin', 'HEAD:master')
 
-                            
+
+##  $ git init
+##  $ git add .
+##  $ git commit -m "Firt commit"
+##$ git push origin HEAD:master
