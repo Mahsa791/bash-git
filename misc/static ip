@@ -1,0 +1,10 @@
+static ip_address=172.31.96.52
+static routers=172.31.96.1
+static domain_name_servers=150.148.0.124
+
+address 172.31.96.52
+netmask 255.255.255.0
+network 10.104.3.0
+broadcast 10.104.3.255
+gateway 10.104.3.1
+
